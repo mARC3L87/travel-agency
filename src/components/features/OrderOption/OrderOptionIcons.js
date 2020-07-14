@@ -21,7 +21,7 @@ const OrderOptionIcons = ({values, required, setOptionValue}) => (
       <div
         className={styles.icon} 
         key={value.id} 
-        onClick={event => setOptionValue(event.currentTarget.value.id)}>
+        onClick={() => setOptionValue(value.id)}>
         <Icon name={value.icon}/>
         {value.name}
         ({formatPrice(value.price)})
