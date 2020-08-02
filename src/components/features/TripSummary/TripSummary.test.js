@@ -8,7 +8,6 @@ describe('Component TripSummary', () => {
   it('should render without crashing', () => {
     const component = shallow(<TripSummary id='abc' image='image.jpg' name='Lorem' cost='$11,111.11' days={5} tags={['text one', 'text two', 'text three']} />);
     expect(component).toBeTruthy();
-    //console.log(component.debug());
   });
 
   it('should generate correct link', () => {
@@ -25,20 +24,20 @@ describe('Component TripSummary', () => {
     expect(component.find('img').prop('alt')).toEqual(expectedAlt);
   });
 
-  /*it('should render correct name, cost, days', () => {
+  it('should render correct name, cost, days', () => {
     const expectedName = 'Lorem';
     const expectedCost = '$11,111.11';
     const expectedDays = 5;
     const component = shallow(<TripSummary name={expectedName} cost={expectedCost} days={expectedDays} />);
     const renderedName = component.find('.title').text();
-    const renderedCost = component.find('.details').at(1).text();
-    const renderedDays = component.find('.details').at(0).text();
+    const renderedCost = component.find('.details').childAt(1).text();
+    const renderedDays = component.find('.details').childAt(0).text();
     expect(renderedName).toEqual(expectedName);
     expect(renderedCost).toEqual(`from ${expectedCost}`);
     expect(renderedDays).toEqual(`${expectedDays} days`);
   });
 
-  it('should throw error without required props', () => {
+  /*it('should throw error without required props', () => {
     expect(() => shallow(<TripSummary />)).toThrow();
   });*/
 

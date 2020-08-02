@@ -9,7 +9,6 @@ describe('Component OrderOption', () => {
   it('should render without crashing', () => {
     const component = shallow(<OrderOption type='dropdown' name='Ipsum' />);
     expect(component).toBeTruthy();
-    //console.log(component.debug());
   });
   
   it('should return empty object if called without required props', () => {
@@ -85,13 +84,11 @@ for(let type in optionTypes){
     /* common tests */
     it('passes dummy test', () => {
       expect(1).toBe(1);
-      console.log(component.debug());
     });
 
     it(`renders ${optionTypes[type]}`, () => {
       expect(subcomponent).toBeTruthy();
       expect(subcomponent.length).toBe(1);
-      console.log(subcomponent.debug());
     });
   
     /* type-specific tests */
