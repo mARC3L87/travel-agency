@@ -37,9 +37,9 @@ describe('Component TripSummary', () => {
     expect(renderedDays).toEqual(`${expectedDays} days`);
   });
 
-  /*it('should throw error without required props', () => {
+  it('should throw error without required props', () => {
     expect(() => shallow(<TripSummary />)).toThrow();
-  });*/
+  });
 
   it('should render tags in correct order', () => {
     const expectedTags = ['text one', 'text two', 'text three'];
